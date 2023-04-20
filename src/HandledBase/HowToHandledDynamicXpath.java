@@ -44,22 +44,21 @@ public class HowToHandledDynamicXpath {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-	WebElement ClickOnWikipedia=driver.findElement(By.xpath("(//cite[@role='text'])[15]"));
-	ClickOnWikipedia.click();
-	
-	String actualTitle=driver.getTitle();
-	String aspectedTitle="Lamborghini Aventador - Wikipedia";
-	
-	System.out.println("Visibility Of Page Title===> "+driver.getTitle());
-	
-	if(actualTitle.equals(aspectedTitle)) {
-		System.out.println("TestCase Pass");
-	}
-	else {
-		System.out.println("TestCase Fail");
-	}
-	
-	
+		WebElement ClickOnWikipedia = driver.findElement(By.xpath("(//cite[@role='text'])[15]"));
+		ClickOnWikipedia.click();
+
+		String actualTitle = driver.getTitle();
+		String aspectedTitle = "Lamborghini Aventador - Wikipedia";
+
+		System.out.println("Visibility Of Page Title===> " + driver.getTitle());
+
+		if (actualTitle.equals(aspectedTitle)) {
+			System.out.println("TestCase Pass");
+		} else {
+			System.out.println("TestCase Fail");
+		}
+
+		driver.quit();
 
 	}
 
