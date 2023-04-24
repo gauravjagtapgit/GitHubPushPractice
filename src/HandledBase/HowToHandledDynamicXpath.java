@@ -8,6 +8,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import net.bytebuddy.utility.RandomString;
+
 import org.openqa.selenium.JavascriptExecutor;
 
 public class HowToHandledDynamicXpath {
@@ -37,7 +39,7 @@ public class HowToHandledDynamicXpath {
 			}
 		}
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,1200)");
+		js.executeScript("window.scrollBy(0,900)");
 
 		try {
 			Thread.sleep(3000);
@@ -53,9 +55,9 @@ public class HowToHandledDynamicXpath {
 		System.out.println("Visibility Of Page Title===> " + driver.getTitle());
 
 		if (actualTitle.equals(aspectedTitle)) {
-			System.out.println("TestCase Pass");
+			System.out.println("[TestCase Pass]");
 		} else {
-			System.out.println("TestCase Fail");
+			System.out.println("[TestCase Fail]");
 		}
 
 		driver.quit();
